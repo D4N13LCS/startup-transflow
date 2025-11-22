@@ -194,18 +194,31 @@ Exemplo:
 
 ### **Redis (saldos)**
 
-📌 *Cole aqui a captura quando estiver pronta*
+1. Acesse o container do Redis
+
+```bash
+docker exec -it redis redis-cli
+```
+
+2. Liste todas as chaves existentes
+
+```bash
+KEYS *
+```
+
+3. Consulte um saldo salvo como string
+
+```bash
+GET saldo:Fabricio
+```
+
+4. Verificar se o Redis está persistindo corretamente
+
+```bash
+INFO persistence
+```
+
+<img width="788" height="210" alt="image" src="https://github.com/user-attachments/assets/d38e673e-5f8c-489a-ae4b-694823bfd585" />
+
 
 ---
-
-## 📸 Resumo das capturas necessárias
-
-* 🖼 API rodando
-* 🖼 Consumer processando mensagens
-* 🖼 RabbitMQ com fila ativa
-* 🖼 MongoDB exibindo documentos
-* 🖼 Redis mostrando saldos
-
----
-
-Se quiser, posso adicionar diagrama de arquitetura, fluxo da fila, ou uma seção de debugging avançado.
